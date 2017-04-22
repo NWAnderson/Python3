@@ -1,0 +1,155 @@
+#ContentArea{
+	border-style: groove;
+	margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+	background-color: #F5F5F5;
+}
+
+#First {
+	border-style: groove;
+	padding-top: 30px;
+    padding-bottom: 30px;
+	margin-left: 0px;
+	background-color: #D3D3D3;
+	
+}
+	.Holes{
+		margin-top: auto;
+		margin-bottom: auto;
+		padding-left: 60px;
+		font-size: 22px;
+	}
+
+#Second {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;
+	background-color: #FFFFFF;
+}
+#Second-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 11px;
+    padding-left: 64px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
+	.Par{
+		margin-top: auto;
+		margin-bottom: auto;
+		font-size: 15Spx;
+	}
+
+#Third {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;	
+	background-color: #D3D3D3;
+}
+#Third-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 86px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
+
+#Forth {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;
+	background-color: #FFFFFF;
+}
+#Forth-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 86px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
+#Fith {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;
+	background-color: #D3D3D3;
+}
+#Fith-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 86px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
+#Sixth {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;
+	background-color: #FFFFFF;
+}
+#Sixth-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 86px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
+#Seventh {
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+	margin-left: 170px;
+	background-color: #D3D3D3;
+}
+#Seventh-Left {
+	float: left;
+	border-style: groove;
+	padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 86px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #4169E1;
+}
