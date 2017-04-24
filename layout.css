@@ -1,0 +1,101 @@
+body{
+	background-image: url("trianglesSeamless.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;
+	font-family: arial;
+	color: gray;
+	letter-spacing: 1px;
+}
+#page_container{
+	width: 100%;
+	min-width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	padding-top: 100px;
+}
+.pageTitle{
+	display: block;
+	font-size: 50px;
+	letter-spacing: 3px;
+	font-weight: 300;
+	color: #00AAE4;
+}
+#add, #subtract {
+	background-color: #00AAE4;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	padding: 5px;
+	width: 75px;
+	height:75px;
+	font-size:20px;
+}
+#counterDiv{
+	font-size: 30px;
+	width: 100px;
+	height: 50px;
+	color: #4D4DFF;
+	font-weight: bold;
+	padding: 10px 0px 0px 0px;
+	margin: auto;
+}
+#answerField{
+	border: none;
+	height: 30px;
+	padding-left: 10px;
+	color: #00AAE4;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+#submit{
+	background-color:#00AAE4;
+	border: none;
+	padding: 5px;
+	color: white;
+}
+.description{
+	font-size: 13px;
+	font-weight: 500;
+	padding-bottom: 30px;
+	letter-spacing: 1px;
+	color: gray;
+}
+.sportButton{
+	background-color: #00AAE4;
+	color: white;
+	width: 150px;
+	padding: 10px 0px 10px 0px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.sportButton:hover, .sportButton:focus{
+	background-color: #4D4DFF;
+}
+.dropMenu_container{
+	position: relative;
+	display: inline-block;
+}
+.dropContent{
+	display: none;
+	position: absolute;
+	background-color:#4D4DFF;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+.dropContent a{
+	color: white;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 10px 0px 10px 0px;
+	text-decoration: none;
+	display: block;
+}
+.dropContent a:hover{
+	background-color: #00AAE4;
+}
+.show{
+	display:block;
+}
