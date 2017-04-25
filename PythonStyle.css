@@ -28,9 +28,9 @@
 
 #Second {
 	border-style: groove;
-	padding-top: 30px;
+	padding-top: 0px;
     padding-right: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     padding-left: 80px;
 	margin-left: 170px;
 	background-color: #FFFFFF;
@@ -40,7 +40,7 @@
 	border-style: groove;
 	padding-top: 30px;
     padding-right: 80px;
-    padding-bottom: 11px;
+    padding-bottom: 24px;
     padding-left: 64px;
 	margin-right: auto;
 	margin-left: auto;
@@ -152,4 +152,67 @@
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #4169E1;
+}
+input[type=text] {
+    width: 5%;
+    padding: 0px 10px;
+    margin: 22px 0;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text2] {
+    width: 5%;
+    padding:0px 10px;
+    margin: 4px 6px 10px 75px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text3] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -14px 6px 10px 80px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text4] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -32px 6px 10px 350px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text5] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -50px 6px 10px 550px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text6] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -50px 6px 10px 700px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text7] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -50px 6px 10px 850px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text8] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -50px 6px 10px 1000px;
+    box-sizing: border-box;
+	float: left;
+}
+input[type=text9] {
+    width: 5%;
+    padding:0px 10px;
+    margin: -50px 6px 10px 1150px;
+    box-sizing: border-box;
+	float: left;
 }
