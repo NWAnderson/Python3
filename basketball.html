@@ -3,19 +3,51 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Basketball</title>
+		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="scorecardScript.js"></script>
 	</head>
 	<body>
 		<div id="page_container">
 			<h1 class="pageTitle">Basketball</h1>
-			<p class="description">Hey! You're playing basketball.</p>
-			<form action="#">
-				<div id="counterDiv"> </div>
-				<input id="subtract" type="button" value="-">
-				<input id="add" type="button" value="+">
-			</form>
+			<p class="description">Hey! You're playing basketball.<br>
+			You may choose to score a game based on quarters or halves.<br>
+			These table cells are editable for you to add your score.</p>
+			
+			<!-- drop down menus for quarter or half -->
+			<div class="dropMenu_container">
+				<button onclick="clickMenu()" id="dropDownMenuButton">Quarter or half?</button>
+				<div id="dropDownMenu" class="dropContent">
+					<a href="#quarter">Quarter</a>
+					<a href="#half">Half</a>
+				</div>
+			</div>
 
+			<!-- This is supposed to display the scorecard based on whether the user
+			chooses quarters or halves -->
+			<div id="scorecard">
+				<a name="quarter"></a>
+				<table><tr><td>Quarter</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+				<tr><td contenteditable>Team 1</td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td></tr>
+				<tr><td contenteditable>Team 2</td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td></tr>
+				<a name="half"></a>
+				</table><br><br>
+				<table><tr><td>Half</td><td>1</td><td>2</td></tr>
+				<tr><td contenteditable>Team 1</td><td contenteditable></td><td contenteditable></td></tr>
+				<tr><td contenteditable>Team 2</td><td contenteditable></td><td contenteditable></td></tr>
+				</table>
+			</div>
+
+			<!-- Calculate button still in the works, back button is fine -->
+			<table>
+			<input id="backButton" type="button" value="Calculate">
+			<a href="home.html">
+			<input id="backButton" type="button" value="Back">
+			</a>
+			</table>
+			
 		</div>
 	</body>
 </html>

@@ -3,23 +3,45 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Disc Golf</title>
+		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="scorecardScript.js"></script>
 	</head>
 	<body>
 		<div id="page_container">
 			<h1 class="pageTitle">Disc Golf</h1>
-			<p class="description">Hey! You're playing disc golf.</p>
-			<p>How many baskets are there?</p>
+			<p class="description">Hey! You're playing disc golf.<br>
+			Enter the number of players and enjoy your game!<br>
+			These table cells are editable for you to add your score.</p>
+			
+			<!-- Still in the works, trying to get this input to work to generate
+			a certain number of rows based on number of players -->
 			<form action="#">
-				<input id="answerField" type="number" textarea="asf">
-				<input id="submit" type="button" value="Submit">
+				<label>Enter the # of players: 
+				<input id="playerNumField" type="number">
+				<input id="playerNumSubmit" type="button" value="Submit"></label>			
 			</form>
-			<form action="#">
-				<div id="counterDiv"> </div>
-				<input id="subtract" type="button" value="-">
-				<input id="add" type="button" value="+">
-			</form>
+			
+			<!-- This displays the score card -->
+			<div id="scorecard">
+				<table><tr><td>Hole</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+				<td>6</td><td>7</td><td>8</td><td>9</td></tr>
+				<tr><td contenteditable>Player 1</td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td><td contenteditable></td></tr>
+				<tr><td>Par</td><td contenteditable>3</td><td contenteditable>3</td>
+				<td contenteditable>3</td><td contenteditable>3</td><td contenteditable>3</td><td contenteditable>3</td>
+				<td contenteditable>3</td><td contenteditable>3</td><td contenteditable>3</td></tr>
+			</div>
+			
+			<!-- Calculate button still in the works, back button is fine -->
+			<table>
+			<input id="backButton" type="button" value="Calculate">
+			<a href="home.html">
+			<input id="backButton" type="button" value="Back">
+			</a>
+			</table>
+						
 		</div>
 	</body>
 </html>

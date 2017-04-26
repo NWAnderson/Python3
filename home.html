@@ -3,23 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Home</title>
+		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="scorecardScript.js"></script>
 	</head>
 	<body>
 		<div id="page_container">
-			<h1 class="pageTitle">Scorecard</h1>
+			<h1 class="pageTitle">Mobile Scorecard</h1>
 			<p class="description">Hi, welcome to our scorecard app.<br>
-			Choose the sport and the number of players,<br>
-			and let's get started.<br>
+			Choose the sport and let's get started.<br>
 			By Jennica, Jacob, and Nick</p>
 			
 			<!-- drop down menus for sports -->
 			<div class="dropMenu_container">
-				<button onclick="clickMenu()" class="sportButton">Select a sport: </button>
+				<button onclick="clickMenu()" id="dropDownMenuButton">Select a sport: </button>
 				<div id="dropDownMenu" class="dropContent">
 					<a href="discGolf.html">Disc Golf</a>
-					<a href="golf.html">Golf</a>
 					<a href="basketball.html">Basketball</a>
 					<a href="football.html">Football</a>
 				</div>

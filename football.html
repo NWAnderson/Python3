@@ -3,19 +3,33 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Football</title>
+		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="scorecardScript.js"></script>
 	</head>
 	<body>
 		<div id="page_container">
 			<h1 class="pageTitle">Football</h1>
-			<p class="description">Hey! You're playing football.</p>
-			<form action="#">
-				<div id="counterDiv"> </div>
-				<input id="subtract" type="button" value="-">
-				<input id="add" type="button" value="+">
-			</form>
+			<p class="description">Hey! You're playing football.<br>
+			These table cells are editable for you to add your score.</p>
+			
+			<!-- This displays the scorecard -->			
+			<div id="scorecard">
+				<table><tr><td>Quarter</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+				<tr><td contenteditable>Team 1</td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td></tr>
+				<tr><td contenteditable>Team 2</td><td contenteditable></td><td contenteditable></td>
+				<td contenteditable></td><td contenteditable></td></tr>
+				</table>
+			</div>
 
+			<table>
+			<input id="backButton" type="button" value="Calculate">
+			<a href="home.html">
+			<input id="backButton" type="button" value="Back">
+			</a>
+			</table>
+			
 		</div>
 	</body>
 </html>

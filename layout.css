@@ -22,46 +22,54 @@ body{
 	font-weight: 300;
 	color: #00AAE4;
 }
-#add, #subtract {
-	background-color: #00AAE4;
-	border-radius: 10px;
-	border: none;
-	color: white;
+#scorecard{
+	min-width: 320px;
+	text-align: center;
+	margin-top: 30px;
+}
+#scorecard table{
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#00AAE4;
+	padding: 15px 5px 15px 5px;
+	border-radius: 15px 0px 15px 0px;
+}
+#scorecard td{
+	font-size: 12px;
+	min-width: 25px;
+	max-width:
 	padding: 5px;
-	width: 75px;
-	height:75px;
-	font-size:20px;
+	text-align: left;
+	color: white;
+	border-bottom: 1px dashed #4CD2FF;
+	border-right: 1px dashed #4cd2ff;
 }
-#counterDiv{
-	font-size: 30px;
-	width: 100px;
-	height: 50px;
-	color: #4D4DFF;
-	font-weight: bold;
-	padding: 10px 0px 0px 0px;
-	margin: auto;
-}
-#answerField{
+#playerNumField{
 	border: none;
-	height: 30px;
-	padding-left: 10px;
-	color: #00AAE4;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+	width: 100px;
+	height: 35px;
 }
-#submit{
+#playerNumSubmit{
+	height: 35px;
 	background-color:#00AAE4;
 	border: none;
-	padding: 5px;
 	color: white;
 }
-.description{
-	font-size: 13px;
-	font-weight: 500;
-	padding-bottom: 30px;
-	letter-spacing: 1px;
-	color: gray;
+#backButton{
+	background-color: gray;
+	width: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	color: white;
+	padding: 5px;
+	text-decoration: none;
+	border: none;
+	height: 35px;
 }
-.sportButton{
+#dropDownMenuButton{
 	background-color: #00AAE4;
 	color: white;
 	width: 150px;
@@ -70,7 +78,7 @@ body{
 	border: none;
 	cursor: pointer;
 }
-.sportButton:hover, .sportButton:focus{
+#dropDownMenuButton:hover, #dropDownMenuButton:focus{
 	background-color: #4D4DFF;
 }
 .dropMenu_container{
@@ -99,3 +107,31 @@ body{
 .show{
 	display:block;
 }
+
+/* #add, #subtract { */
+	/* background-color: #00AAE4; */
+	/* border-radius: 10px; */
+	/* border: none; */
+	/* color: white; */
+	/* padding: 5px; */
+	/* width: 75px; */
+	/* height:75px; */
+	/* font-size:20px; */
+/* } */
+/* #counterDiv{ */
+	/* font-size: 30px; */
+	/* width: 100px; */
+	/* height: 50px; */
+	/* color: #4D4DFF; */
+	/* font-weight: bold; */
+	/* padding: 10px 0px 0px 0px; */
+	/* margin: auto; */
+/* } */
+/* #answerField, #playerField{ */
+	/* border: none; */
+	/* width: 100px; */
+	/* height: 40px; */
+	/* padding-left: 10px; */
+	/* color: #00AAE4; */
+	/* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1); */
+/* } */
