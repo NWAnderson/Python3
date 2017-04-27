@@ -23,6 +23,12 @@ function makeScorecard(){
 			tbody += columnNum;
 			tbody += "</td>";
 		}
+		tbody += '<tr><td><b>Par</b></td>';
+		for (var columnNum = 1; columnNum < numOfColumns; columnNum++){
+			tbody += '<td>'
+			tbody += '<input id ="parCell" value="3">';
+			tbody += "</td>";
+		}
 		for (var i = 1; i <= numOfPlayers; ++i){
 			tbody += '<tr class="playerRow">';
 			tbody += '<td><input id="playerCell" value="Player ';
@@ -36,12 +42,6 @@ function makeScorecard(){
 				tbody += '"></td>';
 			}
 			tbody += '</tr>\n';
-		}
-		tbody += '<td><b>Par</b></td>';
-		for (var columnNum = 1; columnNum < numOfColumns; columnNum++){
-			tbody += '<td>'
-			tbody += '<input id ="parCell" value="3">';
-			tbody += "</td>";
 		}
 		var tfooter = '</table>\n\n';
 	scorecard_container.innerHTML = thead + tbody + tfooter;
