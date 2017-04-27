@@ -5,7 +5,58 @@
 		<title>Basketball</title>
 		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
-		<script src="scorecardScript.js"></script>
+		<script src="dropDownMenu.js"></script>
+		<script>
+			function quarterScorecard(){
+				document.getElementById("calculateButton").disabled = false;
+				var scorecard_container = document.getElementById("scorecard");
+				var thead = "<table><tr><td>Quarters</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>";
+				var tbody = "";
+				for (var i = 1; i <= 2; i++){
+					tbody += '<tr><td>';
+					tbody += '<input id="playerCell" value="Team Name">';
+					tbody += '</td>';
+					for (var j = 1; j <= 4; j++){
+						tbody += '<td>';
+						tbody += '<input id ="scoreCell">';
+						tbody += '</td>';
+					}
+					tbody += "</tr>"
+					var tfooter = '</table>\n\n';
+				}
+				scorecard_container.innerHTML = thead + tbody + tfooter;
+			}
+			function halfScorecard(){
+				document.getElementById("calculateButton").disabled = false;
+				var scorecard_container = document.getElementById("scorecard");
+				var thead = "<table><tr><td>Halves</td><td>1</td><td>2</td></tr>";
+				var tbody = "";
+				for (var i = 1; i <= 2; i++){
+					tbody += '<tr><td>';
+					tbody += '<input id="playerCell" value="Team Name">';
+					tbody += '</td>';
+					for (var j = 1; j <= 2; j++){
+						tbody += '<td>';
+						tbody += '<input id ="scoreCell">';
+						tbody += '</td>';
+					}
+					tbody += "</tr>"
+					var tfooter = '</table>\n\n';
+				}
+				scorecard_container.innerHTML = thead + tbody + tfooter;
+			}
+			function loadButtons(){
+				var calculate = document.getElementById("calculateButton");
+				calculate.addEventListener("click", calculateScore, false);
+			}
+			function calculateScore(){
+				var totalScore = 0;
+				var result_container = document.getElementById("calculatedResult");
+				var scorecard_container = document.getElementById("scorecard");
+				result_container.innerHTML = "Your total score is " + totalScore;
+			}
+			window.addEventListener("load", loadButtons, false);
+		</script>
 	</head>
 	<body>
 		<div id="page_container">
@@ -14,35 +65,27 @@
 			You may choose to score a game based on quarters or halves.<br>
 			These table cells are editable for you to add your score.</p>
 			
-			<!-- drop down menus for quarter or half -->
-			<div class="dropMenu_container">
-				<button onclick="clickMenu()" id="dropDownMenuButton">Quarter or half?</button>
-				<div id="dropDownMenu" class="dropContent">
-					<a href="#quarter">Quarter</a>
-					<a href="#half">Half</a>
+			<!-- drop down menu for quarter or half -->
+			<div class="dropDown">
+				<button onclick="dropDownFunction()" class="dropDownMenuButton">Quarters or halves?:</button>
+				<div id="dropDownMenu" class="dropDownContent">
+					<a onclick="quarterScorecard()" href="#quarter">Quarter</a>
+					<a onclick="halfScorecard()" href="#half">Half</a>
 				</div>
 			</div>
 
 			<!-- This is supposed to display the scorecard based on whether the user
 			chooses quarters or halves -->
 			<div id="scorecard">
-				<a name="quarter"></a>
-				<table><tr><td>Quarter</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-				<tr><td contenteditable>Team 1</td><td contenteditable></td><td contenteditable></td>
-				<td contenteditable></td><td contenteditable></td></tr>
-				<tr><td contenteditable>Team 2</td><td contenteditable></td><td contenteditable></td>
-				<td contenteditable></td><td contenteditable></td></tr>
-				<a name="half"></a>
-				</table><br><br>
-				<table><tr><td>Half</td><td>1</td><td>2</td></tr>
-				<tr><td contenteditable>Team 1</td><td contenteditable></td><td contenteditable></td></tr>
-				<tr><td contenteditable>Team 2</td><td contenteditable></td><td contenteditable></td></tr>
-				</table>
+				Select quarters or halves to get started.
 			</div>
-
-			<!-- Calculate button still in the works, back button is fine -->
+			
+			<!-- displays the score -->
+			<div id="calculatedResult"></div>
+			
+			<!-- Calculate button is still not working... -->
 			<table>
-			<input id="backButton" type="button" value="Calculate">
+			<input id="calculateButton" type="button" value="Calculate">
 			<a href="home.html">
 			<input id="backButton" type="button" value="Back">
 			</a>

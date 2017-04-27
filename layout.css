@@ -14,6 +14,7 @@ body{
 	left: 0px;
 	text-align: center;
 	padding-top: 100px;
+	padding-bottom: 50px;
 }
 .pageTitle{
 	display: block;
@@ -21,6 +22,18 @@ body{
 	letter-spacing: 3px;
 	font-weight: 300;
 	color: #00AAE4;
+}
+#playerNumField{
+	border: none;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+	width: 100px;
+	height: 35px;
+}
+#playerNumSubmit{
+	height: 35px;
+	background-color:#00AAE4;
+	border: none;
+	color: white;
 }
 #scorecard{
 	min-width: 320px;
@@ -38,76 +51,84 @@ body{
 #scorecard td{
 	font-size: 12px;
 	min-width: 25px;
-	max-width:
-	padding: 5px;
 	text-align: left;
 	color: white;
 	border-bottom: 1px dashed #4CD2FF;
 	border-right: 1px dashed #4cd2ff;
 }
-#playerNumField{
+#scoreCell, #parCell, #playerCell{
+	background-color: #00AAE4;
+	max-width: 50px;
 	border: none;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-	width: 100px;
-	height: 35px;
-}
-#playerNumSubmit{
-	height: 35px;
-	background-color:#00AAE4;
-	border: none;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 5px 5px 5px 0px;
 	color: white;
 }
-#backButton{
-	background-color: gray;
+#calculatedResult{
+	margin: 30px;
+}
+.playerRow{
+	font-weight: bold;
+}
+#backButton, #calculateButton{
+	background-color: #3D5199;
 	width: 75px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 30px;
+	margin-top: 15px;
 	color: white;
 	padding: 5px;
 	text-decoration: none;
 	border: none;
 	height: 35px;
 }
-#dropDownMenuButton{
-	background-color: #00AAE4;
-	color: white;
+.dropDownMenuButton {
+    background-color: #00AAE4;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 	width: 150px;
-	padding: 10px 0px 10px 0px;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-}
-#dropDownMenuButton:hover, #dropDownMenuButton:focus{
-	background-color: #4D4DFF;
-}
-.dropMenu_container{
-	position: relative;
-	display: inline-block;
-}
-.dropContent{
-	display: none;
-	position: absolute;
-	background-color:#4D4DFF;
-	min-width: 150px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-.dropContent a{
-	color: white;
-	font-size: 12px;
-	letter-spacing: 1px;
-	padding: 10px 0px 10px 0px;
-	text-decoration: none;
-	display: block;
-}
-.dropContent a:hover{
-	background-color: #00AAE4;
-}
-.show{
-	display:block;
 }
 
+/* Dropdown button on hover & focus */
+.dropDownMenuButton:hover, .dropDownMenuButton:focus {
+    background-color: #3D5199;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #3D5199;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropDownContent a {
+	background-color:#3D5199;
+    color: white;
+	width: 150px;
+	padding: 16px 0px 16px 0px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropDownContent a:hover {background-color: #00AAE4}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 /* #add, #subtract { */
 	/* background-color: #00AAE4; */
 	/* border-radius: 10px; */

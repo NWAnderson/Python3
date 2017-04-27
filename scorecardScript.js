@@ -1,64 +1,62 @@
-/* When the user clicks on the button, it hides or shows the drop down content */
-	var counter = 0;
+var numOfColumns = 10;
+var numOfPlayers = 0;
 
-	function clickMenu(){
-		document.getElementById("dropDownMenu").classList.toggle("show");
-	}
-	
-	window.onclick = function(event) {
-		if (!event.target.matches('#dropDownMenuButton')) {
-			var dropdowns = document.getElementsByClassName("dropContent");
-			for (var i = 0; i < dropdowns.length; i++){
-				var openDropDown = dropdowns[i];
-				if (openDropDown.classList.contains('show')) {
-					openDropDown.classList.remove('show');
-				}
+function loadButtons(){
+	var playerSubmit = document.getElementById("playerNumSubmit");
+	playerSubmit.addEventListener("click", makeScorecard, false);
+	var calculate = document.getElementById("calculateButton");
+	calculate.addEventListener("click", calculateScore, false);
+}
+
+// this function uses the number of players from input to make
+// a table accomodating the number of players
+function makeScorecard(){
+	document.getElementById("calculateButton").disabled = false;
+	var scorecard_container = document.getElementById("scorecard");
+	numOfPlayers = parseInt(document.getElementById("playerNumField").value);
+	/* Table load  */
+	if (numOfPlayers == 1 || numOfPlayers <= 4){
+		var thead = "<table>\n";
+		var tbody = '<td><b>Hole</b></td>';
+		for (var columnNum = 1; columnNum < numOfColumns; columnNum++){
+			tbody += '<td>'
+			tbody += columnNum;
+			tbody += "</td>";
+		}
+		for (var i = 1; i <= numOfPlayers; ++i){
+			tbody += '<tr class="playerRow">';
+			tbody += '<td><input id="playerCell" value="Player"></td>';
+			for (var j = 1; j < numOfColumns; j++){
+				tbody += '<td>';
+				tbody += '<input id ="scoreCell" value ="1">';
+				tbody += '</td>';
 			}
+			tbody += '</tr>\n';
+		}
+		tbody += '<td><b>Par</b></td>';
+		for (var columnNum = 1; columnNum < numOfColumns; columnNum++){
+			tbody += '<td>'
+			tbody += '<input id ="parCell" value="3">';
+			tbody += "</td>";
+		}
+		var tfooter = '</table>\n\n';
+	scorecard_container.innerHTML = thead + tbody + tfooter;
+	}
+	else{
+		alert("Enter a number of players from 1 - 4.");
+	}
+}
+
+function calculateScore(){
+	var totalScore = 0;
+	var result_container = document.getElementById("calculatedResult");
+	var scorecard_container = document.getElementById("scorecard");
+	for (var i = 2; i < numOfPlayers; i++){
+		document.writeln("3234523");
+		for (var j = 2; j < numOfColumns; j++){
+			totalScore += parseInt(scorecard_container.table.tr[i].td[j]).value;
 		}
 	}
-	
-	function loadButtons(){
-		var playerSubmitButton = document.getElementById("playerNumSubmit");
-		playerSubmitButton.addEventListener("click", setupScorecard, false);
-		// var increaseButton = document.getElementById("add");
-		// increaseButton.addEventListener("click", increase, false);
-		// var decreaseButton = document.getElementById("subtract");
-		// decreaseButton.addEventListener("click", decrease, false);
-	}
-	
-	// this function uses the number of players from input to make
-	// a table accomodating the number of players
-	function setupScorecard(){
-		var userInput = document.getElementById("playerNumField");
-		var numberOfPlayers = parseInt(userInput.value);
-		var scorecard = document.getElementById("playerNumDiv");
-		// scorecard.innerHTML = "<table>" +
-		// "<tr><td><b>Hole</b></td>" + 
-		// "<td>1</td>" + "<td>2</td>" + "<td>3</td>" + "<td>4</td>" +
-		// "<td>5</td>" + "<td>6</td>" + "<td>7</td>" + "<td>8</td>" + "<td>9</td></tr>" +
-		// "<tr><td contenteditable>Player 1</td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" +
-		// "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td></tr>" + 
-		// "<tr><td contenteditable>Player 2</td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" +
-		// "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td>" + "<td contenteditable></td></tr>" + 
-		// "<tr><td contenteditable>Par</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td>" +
-		// "<td contenteditable>3</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td>" + "<td contenteditable>3</td></tr>" + 
-		// "</table>"
-		// for (var i = 1; i < numberOfPlayers; i++){
-			// scorecard.innerHTML = "<td></td>";
-		// }
-		// scorecard.innerHTML = "</tr></table>";
-	}
-	
-	// function increase(){
-		// ++counter;
-		// var score = document.getElementById("counterDiv");
-		// score.innerHTML = counter;
-	// }
-	
-	// function decrease(){
-		// --counter;
-		// var score = document.getElementById("counterDiv");
-		// score.innerHTML = counter;
-	// }
-	
-	window.addEventListener("load", loadButtons, false);
+	result_container.innerHTML = "Your total score is " + totalScore;
+}
+window.addEventListener("load", loadButtons, false);
