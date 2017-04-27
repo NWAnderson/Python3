@@ -37,9 +37,7 @@ function makeScorecard(){
 			for (var j = 1; j < numOfColumns; j++){
 				tbody += '<td>';
 				tbody += '<input id ="scoreCell" class="scoreCell"';
-				tbody += 'j" value ="';
-				tbody += j;
-				tbody += '"></td>';
+				tbody += 'j"></td>';
 			}
 			tbody += '</tr>\n';
 		}
