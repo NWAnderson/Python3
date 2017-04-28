@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="dropDownMenu.js"></script>
 		<script>
+			var numOfColumns = 4;
 			function quarterScorecard(){
 				document.getElementById("calculateButton").disabled = false;
 				var scorecard_container = document.getElementById("scorecard");
@@ -18,8 +19,9 @@
 					tbody += '</td>';
 					for (var j = 1; j <= 4; j++){
 						tbody += '<td>';
-						tbody += '<input id ="scoreCell">';
-						tbody += '</td>';
+						tbody += '<input class ="scoreCell" id="scoreCell';
+						tbody += j;
+						tbody += '"></td>';
 					}
 					tbody += "</tr>"
 					var tfooter = '</table>\n\n';
@@ -37,8 +39,9 @@
 					tbody += '</td>';
 					for (var j = 1; j <= 2; j++){
 						tbody += '<td>';
-						tbody += '<input id ="scoreCell">';
-						tbody += '</td>';
+						tbody += '<input class ="scoreCell" id="scoreCell';
+						tbody += j;
+						tbody += '"></td>';
 					}
 					tbody += "</tr>"
 					var tfooter = '</table>\n\n';
@@ -51,8 +54,12 @@
 			}
 			function calculateScore(){
 				var totalScore = 0;
+				for (var j = 1; j <= numOfColumns; j++){
+					var cellValue = parseInt(document.getElementById("scoreCell" + j).value);
+					totalScore += cellValue;
+				}
+
 				var result_container = document.getElementById("calculatedResult");
-				var scorecard_container = document.getElementById("scorecard");
 				result_container.innerHTML = "Your total score is " + totalScore;
 			}
 			window.addEventListener("load", loadButtons, false);

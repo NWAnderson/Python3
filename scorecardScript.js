@@ -26,18 +26,20 @@ function makeScorecard(){
 		tbody += '<tr><td><b>Par</b></td>';
 		for (var columnNum = 1; columnNum < numOfColumns; columnNum++){
 			tbody += '<td>'
-			tbody += '<input id ="parCell" value="3">';
-			tbody += "</td>";
+			tbody += '<input class ="parCell" id="parCell';
+			tbody += columnNum;
+			tbody += '" value="3"></td>';
 		}
 		for (var i = 1; i <= numOfPlayers; ++i){
 			tbody += '<tr class="playerRow">';
 			tbody += '<td><input id="playerCell" value="Player ';
 			tbody += i;
-			tbody += '"</td>';
+			tbody += '"></td>';
 			for (var j = 1; j < numOfColumns; j++){
 				tbody += '<td>';
-				tbody += '<input id ="scoreCell" class="scoreCell"';
-				tbody += 'j"></td>';
+				tbody += '<input class ="scoreCell" id="scoreCell';
+				tbody += j;
+				tbody += '"></td>';
 			}
 			tbody += '</tr>\n';
 		}
@@ -50,11 +52,27 @@ function makeScorecard(){
 }
 
 function calculateScore(){
+	var parScore = 0;
+	var playerScore = 0;
+	numOfPlayers = parseInt(document.getElementById("playerNumField").value);
 	var totalScore = 0;
-	totalScore = parseInt(document.getElementById("scoreCell").value);
-	document.writeln(totalScore);
+	for (var k = 1; k < numOfColumns; k++){
+		var cellPar = parseInt(document.getElementById("parCell" + k).value);
+		parScore += cellPar;
+	}
+	for (var i = 1; i <= numOfPlayers; i++){
+		for (var j = 1; j < numOfColumns; j++){
+			var cellValue = parseInt(document.getElementById("scoreCell" + j).value);
+			totalScore += cellValue;
+			// var cellValue = parseFloat(document.getElementById("scoreCell" + i).value);
+			// totalScore += cellValue;
+		}
+	playerScore = totalScore - parScore;
 	var result_container = document.getElementById("calculatedResult");
 	var scorecard_container = document.getElementById("scorecard");
+	result_container.innerHTML = "Your score is " + playerScore;
+	}
+	
 	// for (var i = 2; i < numOfPlayers; i++){
 		// document.writeln("3234523");
 		// for (var j = 2; j < numOfColumns; j++){

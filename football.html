@@ -6,7 +6,7 @@
 		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script>
-
+			var numOfColumns = 4;
 			function loadPage(){
 				var calculate = document.getElementById("calculateButton");
 				calculate.addEventListener("click", calculateScore, false);
@@ -20,8 +20,9 @@
 					tbody += '</td>';
 					for (var j = 1; j <= 4; j++){
 						tbody += '<td>';
-						tbody += '<input id ="scoreCell">';
-						tbody += '</td>';
+						tbody += '<input class ="scoreCell" id="scoreCell';
+						tbody += j;
+						tbody += '"></td>';
 					}
 					tbody += "</tr>"
 					var tfooter = '</table>\n\n';
@@ -31,8 +32,12 @@
 			
 			function calculateScore(){
 				var totalScore = 0;
+				for (var j = 1; j <= numOfColumns; j++){
+					var cellValue = parseInt(document.getElementById("scoreCell" + j).value);
+					totalScore += cellValue;
+				}
+
 				var result_container = document.getElementById("calculatedResult");
-				var scorecard_container = document.getElementById("scorecard");
 				result_container.innerHTML = "Your total score is " + totalScore;
 			}
 			window.addEventListener("load", loadPage, false);
@@ -57,6 +62,7 @@
 			<input id="backButton" type="button" value="Back">
 			</a>
 			</table>
+			
 			
 		</div>
 	</body>

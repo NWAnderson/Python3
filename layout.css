@@ -16,6 +16,13 @@ body{
 	padding-top: 100px;
 	padding-bottom: 50px;
 }
+#footer{
+	display: block;
+	position: fixed;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
 .pageTitle{
 	display: block;
 	font-size: 50px;
@@ -49,18 +56,18 @@ body{
 	border-radius: 15px 0px 15px 0px;
 }
 #scorecard td{
-	font-size: 12px;
+	font-size: 14px;
 	min-width: 25px;
 	text-align: left;
 	color: white;
 	border-bottom: 1px dashed #4CD2FF;
 	border-right: 1px dashed #4cd2ff;
 }
-#scoreCell, #parCell, #playerCell{
+.scoreCell, .parCell, #playerCell{
 	background-color: #00AAE4;
 	max-width: 50px;
 	border: none;
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: 1px;
 	padding: 5px 5px 5px 0px;
 	color: white;

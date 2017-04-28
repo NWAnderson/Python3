@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Golf</title>
+		<title>Disc Golf</title>
+		<!-- Links to style sheet and script -->
 		<link rel="stylesheet" type="text/css" href="layout.css">
 		<script src="scorecardScript.js"></script>
 	</head>
@@ -10,16 +11,31 @@
 		<div id="page_container">
 			<h1 class="pageTitle">Golf</h1>
 			<p class="description">Hey! You're playing golf.</p>
+			
+			<!-- Enter a number of players between 1 and 4 to create the table -->
 			<form action="#">
-				<div id="counterDiv"> </div>
-				<input id="subtract" type="button" value="-">
-				<input id="add" type="button" value="+">
+				<label>Enter the # of players to start: 
+				<input id="playerNumField" type="number">
+				<input id="playerNumSubmit" type="button" value="Submit"></label>			
 			</form>
 			
-			<a href="home.html">
-			<div id="backButton">Back</div>
-			</a>
+			<!-- This displays the score card -->
+			<div id="scorecard">
+				Note: The max number of players is 4.<br>
+				These table cells are editable for you to add your score.
+			</div>
 			
+			<!-- displays the score -->
+			<div id="calculatedResult"></div>
+			
+			<!-- Still trying to get the calculate button to work :( -->
+			<table>
+			<input id="calculateButton" type="button" value="Calculate" disabled="">
+			<a href="home.html">
+			<input id="backButton" type="button" value="Back">
+			</a>
+			</table>
+						
 		</div>
 	</body>
 </html>
